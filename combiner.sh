@@ -7,7 +7,7 @@
 
 if [ $# -ne 3 ]; then
   echo "how to use" 1>&2
-  echo "./combine.sh [windows batch(CRLF)] [shell script(LF)] [combined file(out-mixed)]" 1>&2
+  echo "./combiner.sh [windows batch(CRLF)] [shell script(LF)] [combined file(out-mixed)]" 1>&2
   exit 1
 fi
 
@@ -20,6 +20,7 @@ DEST_FILE="$3"
 CR=$(printf '\r')
 echo ":<<___FUNC_BATCH___ $CR" > "$DEST_FILE"
 cat "$WINDOWS_SOURCE" >> "$DEST_FILE"
+echo "$CR" >> "$DEST_FILE"
 echo "exit /b$CR" >> "$DEST_FILE"
 echo "" >> "$DEST_FILE"
 echo "___FUNC_BATCH___" >> "$DEST_FILE"
