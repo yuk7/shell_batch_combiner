@@ -14,7 +14,7 @@ If you run it as a shell script, the batch file part will be interpreted as here
 
 If you run it as a batch file, it will be executed from the second line and will exit before the shell script line.
 
-output sample (highlight as cmd)
+### output sample
 ```cmd
 :<<___FUNC_BATCH___ ^M                                                                                      
 echo Hello from Windows!^M
@@ -26,15 +26,7 @@ echo Hello from Linux!
 echo Kernel version
 uname -a
 ```
-same(highlight as shell script)
-```bash
-:<<___FUNC_BATCH___ ^M                                                                                      
-echo Hello from Windows!^M
-echo Windows version^M
-ver^M
-exit /b^M
-___FUNC_BATCH___
-echo Hello from Linux!
-echo Kernel version
-uname -a
-```
+#### Highlight as batch
+![highlight_as_batch](https://user-images.githubusercontent.com/29954265/148376718-f70031ed-427f-4fbb-bf34-dca7d772fd96.png)
+#### Highlight as shell
+![highlight_as_shell](https://user-images.githubusercontent.com/29954265/148376724-eaabc0c5-d5d1-4b97-83ab-e62315c4dedc.png)
